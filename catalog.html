@@ -49,6 +49,54 @@
 		    	</ul>
 		    	<h1 class="breadcrumbs-title__title">Сливочное мороженое</h1>
 		    </div>
+		    <form action="" method="">
+		        <fieldset class="sort">
+                    <legend class="sort__title">Сортировка:</legend>
+                    <select>
+                        <option>По популярности</option>
+                        <option>Сначала недорогие</option>
+                        <option>Сначала дорогие</option>
+                        <option>По жирности</option>
+                    </select>
+                </fieldset>
+                <fieldset class="price">
+                    <legend class="price__title">Цена: 100 руб. - 500 руб.</legend>
+                    <div class="price__range-filter">
+                        <div class="price__range-controls">
+                            <div class="price__scale">
+                                <div class="price__bar"></div>
+                            </div>
+                            <div class="price__toggle price__toggle--min"></div>
+                            <div class="price__toggle price__toggle--max"></div>
+                       </div>
+                    </div>
+                </fieldset>
+		    	<fieldset class="fat"> <!--radio: name-у всех одинаковые, value-разные-->
+		    		<legend class="fat-title">Жирность:</legend>
+		    		<input type="radio" class="fat__field" name="fat-radio" value="0%" id="min">
+		    		<label for="min" class="fat__description">0%</label>
+		    		<input type="radio" class="fat__field" name="fat-radio" value="до 10%" id="little" checked>
+		    		<label for="little" class="fat__description">до 10%</label>
+		    		<input type="radio" class="fat__field" name="fat-radio" value="до 30%" id="big">
+		    		<label for="big" class="fat__description">до 30%</label>
+		    		<input type="radio" class="fat__field" name="fat-radio" value="выше 30%" id="max">
+		    		<label for="max" class="fat__description">выше 30%</label>
+		    	</fieldset>
+		    	<fieldset class="fillers">  <!--checkbox: name-у всех разные, value-не обязательны-->
+		    		<legend class="fillers__title">Наполнители:</legend>
+		    		<input type="checkbox" name="fillers-chocolate" id="fillers-chocolate" class="fillers__field" checked>
+		    		<label for="fillers-chocolate" class="fillers__description">Шоколадные</label>
+		    		<input type="checkbox" name="fillers-sugar" id="fillers-sugar" class="fillers__field" checked>
+		    		<label for="fillers-sugar" class="fillers__description">Сахарные присыпки</label>
+		    		<input type="checkbox" name="fillers-fruit" id="fillers-fruit" class="fillers__field">
+		    		<label for="fillers-fruit" class="fillers__description">Фрукты</label>
+		    		<input type="checkbox" name="fillers-syrups" id="fillers-syrups" class="fillers__field">
+		    		<label for="fillers-syrups" class="fillers__description">Сиропы</label>
+		    		<input type="checkbox" name="fillers-jam" id="fillers-jam" class="fillers__field">
+		    		<label for="fillers-jam" class="fillers__description">Джемы</label>
+		    	</fieldset>
+		    	<input type="submit" value="Применить">
+		    </form>
 		    <section class="items">
 		    	<div class="hits__container">
 		    		<article class="item">
