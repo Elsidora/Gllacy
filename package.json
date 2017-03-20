@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Elsidora/Gllacy/issues"
   },
-  "homepage": "https://github.com/Elsidora/Gllacy#readme"
+  "homepage": "https://github.com/Elsidora/Gllacy#readme",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0"
+  }
 }
