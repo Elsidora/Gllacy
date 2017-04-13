@@ -1,7 +1,52 @@
 .main-header
-	min-height: 126px
+	min-height: 119px
 	&__top
 		display: flex
+		position: relative
+	&__logo
+		position: absolute
+		left: -5px
 	&__list
 		display: flex
+		padding: 15px
+		padding-left: 165px
+	&__item
+		padding: 8px 14px
+		font: 16px/18px "Roboto Bold", "Arial", sans-serif
+	&__link
+		color: #fff
+		
+	&__subList
+		display: none
+	&__service
+		display: flex
+		justify-content: flex-end
+		width: 586px
+		padding: 15px 0
+	&__point
+		padding: 8px 32px
+		padding-bottom: 7px
+		padding-left: 45px 
+		border-top-left-radius: 15% 50%
+		border-bottom-left-radius: 15% 50%
+		border-top-right-radius: 15% 50%
+		border-bottom-right-radius: 15% 50%
+		background: #9db1a5
+		margin-left: 10px
+		font: 14px/16px "Roboto", "Arial", sans-serif
+		color: #fff
+		&--login
+			padding-right: 16px
+		&--search
+			padding: 16px
+			border-radius: 50%
+	&__bottom
+		text-align: right
+		color: #fff
+	&__mode
+		font: 14px/16px "Roboto Bold", "Arial", sans-serif
+		margin-bottom: 5px
+	&__tel
+		font: 22px/24px "Roboto Bold", "Arial", sans-serif
+		
 	
