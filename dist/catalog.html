@@ -9,13 +9,13 @@
 </head>
 <body>       
     <div class="container">
-        <header class="main-header">
+        <header class="main-header main-header--catalog">
 
             <div class="main-header__top">
 				<div class="main-header__logo"><a href = "index.html"><img src="img/logo.svg" width="154" height="64" alt=""></a></div>
         	    <nav class="main-header__navigation">
         		    <ul class="main-header__list">
-					    <li class="main-header__item"><a class = "main-header__link" href="">Каталог</a>
+					    <li class="main-header__item main-header__item--active"><a class = "main-header__link" href="">Каталог</a>
        			            <ul class="main-header__subList">
        			            	<li class="main-header__subItem"><a href="" class="main-header__subLink"><b>Новинки</b></a></li>
        			            	<li class="main-header__subItem"><a href="" class="main-header__subLink">Сливочное</a></li>
@@ -28,11 +28,11 @@
 					    <li class="main-header__item"><a class = "main-header__link" href="">О Компании</a></li>
         		    </ul>
         	    </nav>
-        	    <div class="main-header__service">
-        		    <div class="main-header__search"></div>
-        		    <div class="main-header__login"></div>
-        		    <div class="main-header__basket"></div>
-        	    </div>
+        	    <ul class="main-header__service">
+        		    <li class="main-header__point main-header__point--search"></li>
+        		    <li class="main-header__point main-header__point--login">Вход</li>
+        		    <li class="main-header__point main-header__point--basket main-header__point--catalog"> 2 товара</li>
+        	    </ul>
         	</div>
         	<div class="main-header__bottom">
         		<p class="main-header__mode">с 10 до 20, ежедневно</p>
@@ -44,15 +44,15 @@
 		    	<ul class="breadcrumbs">
 		    		<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
 		    		<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог</a></li>
-		    		<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Сливочное</a></li>
+		    		<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link--active">Сливочное</a></li>
 		    	</ul>
 		    	<h1 class="breadcrumbs-title__title">Сливочное мороженое</h1>
 		    </div>
-		    <form action="" method="">
+		    <form class="form-catalog" action="" method="">
 		        <fieldset class="sort">
                     <legend class="sort__title">Сортировка:</legend>
-                    <select>
-                        <option>По популярности</option>
+                    <select class="sort__list">
+                        <option class="sort__item">По популярности</option>
                         <option>Сначала недорогие</option>
                         <option>Сначала дорогие</option>
                         <option>По жирности</option>
