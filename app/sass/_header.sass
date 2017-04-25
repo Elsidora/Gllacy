@@ -1,5 +1,4 @@
 .main-header
-	min-height: 119px
 	&__top
 		display: flex
 		position: relative
@@ -13,6 +12,13 @@
 	&__item
 		padding: 8px 14px
 		font: 16px/18px "Roboto Bold", "Arial", sans-serif
+		&--active
+			padding: 7px 13px
+			border-top-left-radius: 15% 50%
+			border-bottom-left-radius: 15% 50%
+			border-top-right-radius: 15% 50%
+			border-bottom-right-radius: 15% 50%
+			background: #d07058
 	&__link
 		color: #fff
 		
@@ -40,6 +46,10 @@
 		&--search
 			padding: 16px
 			border-radius: 50%
+		&--catalog
+			padding-right: 12px
+			padding-left: 45px
+			color: #000
 	&__bottom
 		text-align: right
 		color: #fff
