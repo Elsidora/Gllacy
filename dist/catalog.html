@@ -52,15 +52,15 @@
 		        <fieldset class="sort">
                     <legend class="sort__title">Сортировка:</legend>
                     <select class="sort__list">
-                        <option class="sort__item">По популярности</option>
-                        <option>Сначала недорогие</option>
-                        <option>Сначала дорогие</option>
-                        <option>По жирности</option>
+                        <option class="sort__item sort__item--active">по популярности</option>
+                        <option>сначала недорогие</option>
+                        <option>сначала дорогие</option>
+                        <option>по жирности</option>
                     </select>
                 </fieldset>
                 <fieldset class="price">
                     <legend class="price__title">Цена: 100 руб. - 500 руб.</legend>
-                    <div class="price__range-filter">
+                    <div class="price__range-filter sort__list">
                         <div class="price__range-controls">
                             <div class="price__scale">
                                 <div class="price__bar"></div>
@@ -71,7 +71,8 @@
                     </div>
                 </fieldset>
 		    	<fieldset class="fat"> <!--radio: name-у всех одинаковые, value-разные-->
-		    		<legend class="fat-title">Жирность:</legend>
+		    		<legend class="fat__title">Жирность:</legend>
+		    		<div class="sort__list sort__list--fat">
 		    		<input type="radio" class="fat__field" name="fat-radio" value="0%" id="min">
 		    		<label for="min" class="fat__description">0%</label>
 		    		<input type="radio" class="fat__field" name="fat-radio" value="до 10%" id="little" checked>
@@ -80,9 +81,11 @@
 		    		<label for="big" class="fat__description">до 30%</label>
 		    		<input type="radio" class="fat__field" name="fat-radio" value="выше 30%" id="max">
 		    		<label for="max" class="fat__description">выше 30%</label>
+		    		</div>
 		    	</fieldset>
 		    	<fieldset class="fillers">  <!--checkbox: name-у всех разные, value-не обязательны-->
 		    		<legend class="fillers__title">Наполнители:</legend>
+		    		<div class="sort__list sort__list--fillers">
 		    		<input type="checkbox" name="fillers-chocolate" id="fillers-chocolate" class="fillers__field" checked>
 		    		<label for="fillers-chocolate" class="fillers__description">Шоколадные</label>
 		    		<input type="checkbox" name="fillers-sugar" id="fillers-sugar" class="fillers__field" checked>
@@ -93,134 +96,135 @@
 		    		<label for="fillers-syrups" class="fillers__description">Сиропы</label>
 		    		<input type="checkbox" name="fillers-jam" id="fillers-jam" class="fillers__field">
 		    		<label for="fillers-jam" class="fillers__description">Джемы</label>
+					</div>
 		    	</fieldset>
-		    	<input type="submit" value="Применить">
+		    	<input class="form-catalog__btn" type="submit" value="Применить">
 		    </form>
 		    <section class="items">
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<div class="item__show"><img src="img/items/orange_jam.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/orange_jam.png" width="267" height="267" alt="" class="item__image"><span class="item__price">310&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
 		    		</article>
-		    		<article class="item-block">
+		    		<article class="item-block item-catalog">
 		    			<div class="item-block__show"><img src="img/items/orange_jam.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<div class="item__show"><img src="img/items/coffee_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/coffee_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">380&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочно-кофейное с кусочками шоколада</p>
 		    		</article>
-		    		<article class="item-block">
+		    		<article class="item-block item-catalog">
 		    			<div class="item-block__show"><img src="img/items/coffee_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<div class="item__show"><img src="img/items/strawberry_whiteChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/strawberry_whiteChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">355&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочно-клубничное с присыпкой из белого шоколада</p>
 		    		</article>
-		    		<article class="item-block">
+		    		<article class="item-block item-catalog">
 		    			<div class="item-block__show"><img src="img/items/strawberry_whiteChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<div class="item__show"><img src="img/items/cream_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/cream_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price">415&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное крем-брюле с карамельной подливкой</p>
 		    		</article>
-		    		<article class="item-block">
+		    		<article class="item-block item-catalog">
 		    			<div class="item-block__show"><img src="img/items/cream_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<div class="item__show"><img src="img/items/cowberry.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/cowberry.png" width="267" height="267" alt="" class="item__image"><span class="item__price">325&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное с брусничным джемом</p>
 		    		</article>
-		    		<article class="item-block">
+		    		<article class="item-block item-catalog">
 		    			<div class="item-block__show"><img src="img/items/cowberry.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<div class="item__show"><img src="img/items/blueberry.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/blueberry.png" width="267" height="267" alt="" class="item__image"><span class="item__price">410&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочно-черничное с цельными ягодами черники</p>
 		    		</article>
-		    		<article class="item-block">
+		    		<article class="item-block item-catalog">
 		    			<div class="item-block__show"><img src="img/items/blueberry.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<item__show><img src="img/items/lemon_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></item__show>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/lemon_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price">375&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочно-лимонное с карамельной присыпкой</p>
 		    		</article>
-		    		<article class="item-block">
-		    			<item-block__show><img src="img/items/lemon_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price"></span></item-block__show>
+		    		<article class="item-block item-catalog">
+		    			<div class="item-block__show"><img src="img/items/lemon_caramel.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<item__show><img src="img/items/creamy_chocolateChips.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></item__show>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/creamy_chocolateChips.png" width="267" height="267" alt="" class="item__image"><span class="item__price">320&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное с шоколадной стружкой</p>
 		    		</article>
-		    		<article class="item-block">
-		    			<item-block__show><img src="img/items/creamy_chocolateChips.png" width="267" height="267" alt="" class="item__image"><span class="item__price"></span></item-block__show>
+		    		<article class="item-block item-catalog">
+		    			<div class="item-block__show"><img src="img/items/creamy_chocolateChips.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<item__show><img src="img/items/vanilla_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></item__show>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/vanilla_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">440&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочно-ванильное с кусочками шоколада</p>
 		    		</article>
-		    		<article class="item-block">
-		    			<item-block__show><img src="img/items/vanilla_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price"></span></item-block__show>
+		    		<article class="item-block item-catalog">
+		    			<div class="item-block__show"><img src="img/items/vanilla_chocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<item__show><img src="img/items/creamy_menthol.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></item__show>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/creamy_menthol.png" width="267" height="267" alt="" class="item__image"><span class="item__price">435&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное с ментоловым сиропом</p>
 		    		</article>
-		    		<article class="item-block">
-		    			<item-block__show><img src="img/items/creamy_menthol.png" width="267" height="267" alt="" class="item__image"><span class="item__price"></span></item-block__show>
+		    		<article class="item-block item-catalog">
+		    			<div class="item-block__show"><img src="img/items/creamy_menthol.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<item__show><img src="img/items/creamy_blackChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></item__show>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/creamy_blackChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">355&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное с кусочками черного шоколада</p>
 		    		</article>
-		    		<article class="item-block">
-		    			<item-block__show><img src="img/items/creamy_blackChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price"></span></item-block__show>
+		    		<article class="item-block item-catalog">
+		    			<div class="item-block__show"><img src="img/items/creamy_blackChocolate.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    	<div class="hits__container">
-		    		<article class="item">
-		    			<item__show><img src="img/items/creamy_mint.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></item__show>
+		    		<article class="item item-catalog">
+		    			<div class="item__show"><img src="img/items/creamy_mint.png" width="267" height="267" alt="" class="item__image"><span class="item__price">420&#8399;/кг</span></div>
 		    			<p class="item__description">Сливочное с мятным сиропом</p>
 		    		</article>
-		    		<article class="item-block">
-		    			<item-block__show><img src="img/items/creamy_mint.png" width="267" height="267" alt="" class="item__image"><span class="item__price"></span></item-block__show>
+		    		<article class="item-block item-catalog">
+		    			<div class="item-block__show"><img src="img/items/creamy_mint.png" width="267" height="267" alt="" class="item__image"><span class="item__price">&#8399;/кг</span></div>
 		    			<a href="" class="item-block__link">Быстрый просмотр</a>
 		    		</article>
 		    	</div>
 		    </section>
 		    <aside class="paginator">
 		    	<ul class="paginator__list">
-		    		<li class="paginator__item"><a href="" class="paginator__link">1</a></li>
+		    		<li class="paginator__item paginator__item--active"><a href="" class="paginator__link paginator__link--active">1</a></li>
 		    		<li class="paginator__item"><a href="" class="paginator__link">2</a></li>
 		    		<li class="paginator__item"><a href="" class="paginator__link">3</a></li>
 		    		<li class="paginator__item"><a href="" class="paginator__link">4</a></li>
@@ -229,30 +233,30 @@
 		    	</ul>
 		    </aside>		
 	    </main>
-	    <footer class="main-footer">
-        	<div class="main-footer__container">
+		<footer class="main-footer main-footer--catalog">
+        	<div class="container main-footer__container">
         		<div class="main-footer__social">
-                	<a class="main-footer__social__btn main-footer__social__btn--tw" href="#">Twitter</a>
-                	<a class="main-footer__social__btn main-footer__social__btn--instagram" href="#">Инстаграм</a>
-                	<a class="main-footer__social__btn main-footer__social__btn--fb" href="#">Фейсбук</a>
-                	<a class="main-footer__social__btn main-footer__social__btn--vk" href="#">Вконтакте</a>
-            	</div>
+                	<a class="main-footer__btn main-footer__btn--tw" href="#">Twitter</a>
+                	<a class="main-footer__btn main-footer__btn--instagram" href="#">Инстаграм</a>
+                	<a class="main-footer__btn main-footer__btn--fb" href="#">Фейсбук</a>
+                	<a class="main-footer__btn main-footer__btn--vk" href="#">Вконтакте</a>
+           		</div>
             	<div class="main-footer__menu">
-          	    	<ul class="main-footer__menu__left">
-          		    	<li class="main-footer__menu__item"><a href="" class="main-footer__menu__link">Для поставщиков</a></li>
-          		    	<li class="main-footer__menu__item"><a href="" class="main-footer__menu__link">О производстве</a></li>
+          	    	<ul class="main-footer__left">
+          		    	<li class="main-footer__item main-footer__item--provider"><a href="" class="main-footer__link">Для поставщиков</a></li>
+          		    	<li class="main-footer__item"><a href="" class="main-footer__link">О производстве</a></li>
           	    	</ul>
-          	    	<ul class="main-footer__menu__right">
-          		    	<li class="main-footer__menu__item"><a href="" class="main-footer__menu__link">Наши документы</a></li>
-          		    	<li class="main-footer__menu__item"><a href="" class="main-footer__menu__link">Экологические стандарты</a></li>
+          	    	<ul class="main-footer__right">
+          		    	<li class="main-footer__item"><a href="" class="main-footer__link">Наши документы</a></li>
+          		    	<li class="main-footer__item"><a href="" class="main-footer__link">Экологические стандарты</a></li>
           	    	</ul>
             	</div>
             	<div class="main-footer__copyright">
-          	    	<div class="main-footer__logo">Сделано в <a href = "https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</div>
-          	    	<p class="main-footer__made"></p>
+          	    	<div class="main-footer__logo"><img class="main-footer__image" src="img/footer_logo.png" width="108" height="38" alt=""></div>
+          	    	<p class="main-footer__made">Сделано в <a class="main-footer__link" href = "https://htmlacademy.ru/">HTML Academy</a> &copy; 2016</p>
             	</div>
-			</div>
-        </footer>
+        	</div>
+    	</footer>   
     </div> 
     <script src=""></script>   
 </body>
