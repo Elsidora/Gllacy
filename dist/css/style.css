@@ -40,8 +40,17 @@ a {
   padding-left: 165px; }
 
 .main-header__item {
+  position: relative;
   padding: 8px 14px;
   font: 16px/18px "Roboto Bold", "Arial", sans-serif; }
+  .main-header__item:hover .main-header__subList {
+    display: block; }
+  .main-header__item:hover {
+    background: #fff;
+    border-top-left-radius: 15% 50%;
+    border-bottom-left-radius: 15% 50%;
+    border-top-right-radius: 15% 50%;
+    border-bottom-right-radius: 15% 50%; }
   .main-header__item--active {
     padding: 7px 13px;
     border-top-left-radius: 15% 50%;
@@ -52,9 +61,29 @@ a {
 
 .main-header__link {
   color: #fff; }
+  .main-header__link:hover {
+    color: #000; }
 
 .main-header__subList {
+  position: absolute;
+  top: 35px;
+  left: -5px;
+  border-radius: 10px;
+  z-index: 10;
+  width: 124px;
+  background: #fff;
   display: none; }
+
+.main-header__subItem {
+  padding: 10px;
+  font: 14px/16px "Roboto", "Arial", sans-serif; }
+  .main-header__subItem:hover {
+    background: #fbded7; }
+  .main-header__subItem:active {
+    background: #f6b5a5; }
+
+.main-header__subLink {
+  color: #000; }
 
 .main-header__service {
   display: flex;
@@ -63,6 +92,7 @@ a {
   padding: 15px 0; }
 
 .main-header__point {
+  position: relative;
   padding: 8px 32px;
   padding-bottom: 7px;
   padding-left: 45px;
@@ -79,10 +109,31 @@ a {
   .main-header__point--search {
     padding: 16px;
     border-radius: 50%; }
+    .main-header__point--search:hover .main-header__form-search {
+      display: block; }
+    .main-header__point--search:hover {
+      background: #fff; }
   .main-header__point--catalog {
     padding-right: 12px;
     padding-left: 45px;
     color: #000; }
+
+.main-header__form-search {
+  position: absolute;
+  top: 35px;
+  left: -325px;
+  width: 315px;
+  text-align: center;
+  padding: 20px;
+  background: #f8f7f4;
+  border-radius: 10px;
+  display: none;
+  z-index: 15; }
+
+.main-header__input-search {
+  width: 290px;
+  padding: 0 10px;
+  font: 14px/24px "Roboto", "Arial", sans-serif; }
 
 .main-header__bottom {
   text-align: right;

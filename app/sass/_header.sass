@@ -10,8 +10,18 @@
 		padding: 15px
 		padding-left: 165px
 	&__item
+		position: relative
 		padding: 8px 14px
 		font: 16px/18px "Roboto Bold", "Arial", sans-serif
+		&:hover .main-header__subList
+			display: block
+		&:hover
+			background: #fff
+			border-top-left-radius: 15% 50%
+			border-bottom-left-radius: 15% 50%
+			border-top-right-radius: 15% 50%
+			border-bottom-right-radius: 15% 50%
+
 		&--active
 			padding: 7px 13px
 			border-top-left-radius: 15% 50%
@@ -21,15 +31,34 @@
 			background: #d07058
 	&__link
 		color: #fff
+		&:hover
+			color: #000
 		
 	&__subList
+		position: absolute
+		top: 35px
+		left: -5px
+		border-radius: 10px
+		z-index: 10
+		width: 124px
+		background: #fff
 		display: none
+	&__subItem
+		padding: 10px
+		font: 14px/16px "Roboto", "Arial", sans-serif
+		&:hover
+			background: #fbded7
+		&:active
+			background: #f6b5a5
+	&__subLink
+		color: #000
 	&__service
 		display: flex
 		justify-content: flex-end
 		width: 586px
 		padding: 15px 0
 	&__point
+		position: relative
 		padding: 8px 32px
 		padding-bottom: 7px
 		padding-left: 45px 
@@ -41,15 +70,35 @@
 		margin-left: 10px
 		font: 14px/16px "Roboto", "Arial", sans-serif
 		color: #fff
+		
 		&--login
 			padding-right: 16px
 		&--search
 			padding: 16px
 			border-radius: 50%
+			&:hover .main-header__form-search
+				display: block
+			&:hover
+				background: #fff
 		&--catalog
 			padding-right: 12px
 			padding-left: 45px
 			color: #000
+	&__form-search
+		position: absolute
+		top: 35px
+		left: -325px
+		width: 315px
+		text-align: center
+		padding: 20px
+		background: #f8f7f4
+		border-radius: 10px
+		display: none
+		z-index: 15
+	&__input-search
+		width: 290px
+		padding: 0 10px
+		font: 14px/24px "Roboto", "Arial", sans-serif
 	&__bottom
 		text-align: right
 		color: #fff
