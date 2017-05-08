@@ -30,8 +30,48 @@
         	    </nav>
         	    <ul class="main-header__service">
         		    <li class="main-header__point main-header__point--search"><form action="" class="main-header__form-search"><input class="main-header__input-search" type="text" placeholder="Что ищем?"></form></li>
-        		    <li class="main-header__point main-header__point--login">Вход</li>
-        		    <li class="main-header__point main-header__point--basket main-header__point--catalog"> 2 товара</li>
+        		    <li class="main-header__point main-header__point--login">Вход
+        		    	<form action="" class="main-header__form-login">
+        		    			<input type="text" class="main-header__input-info" placeholder="Электронная почта">
+        		    			<input type="text" class="main-header__input-info" placeholder="Пароль">
+        		    		<div class="main-header__wrapper-link">
+        		    			<button type="submit" class="main-header__login-btn">Войти</button>
+        		    			<div class="main-header__wrapper-subLink"><a href="" class="main-header__login-subLink">Забыли пароль?</a><a href="" class="main-header__login-subLink">Новая регистрация</a></div>
+        		    		</div>
+        		    	</form>
+        		    </li>
+        		    <li class="main-header__point main-header__point--basket main-header__point--catalog"> 2 товара
+        		    <form action="" class="form-basket">
+        		    	<div class="form-basket__items">
+        		    		<div class="form-basket__item">
+        		    			<div class="form-basket__image-title">
+        		    				<img src="img/items-basket/orange_jam.png" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" class="form-basket__image">
+        		    				<span class="form-basket__title">Пломбир с апельсиновым джемом</span>
+								</div>
+       		    				<div class="form-basket__weight-cost">
+        		    				<span class="form-basket__weight">1.5 кг</span>
+        		    				<span class="form-basket__cost">200 руб.</span>
+								</div>
+        		    			<span class="form-basket__price">300 руб.</span>
+        		    		</div>
+        		    		<div class="form-basket__item">
+        		    			<div class="form-basket__image-title">
+        		    				<img src="img/items-basket/strawberry_whhiteChocolate.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" class="form-basket__image">
+        		    				<span class="form-basket__title">Клубничный пломбир с присыпкой<br> из белого шоколада</span>
+								</div>
+       		    				<div class="form-basket__weight-cost">
+									<span class="form-basket__weight">1.5 кг</span>
+        		    				<span class="form-basket__cost">300 руб.</span>
+								</div>
+        		    			<span class="form-basket__price">450 руб.</span>
+        		    		</div>
+        		    		<div class="form-basket__result">
+        		    			<div class="form-basket__summary">Итого: 750 руб.</div>
+        		    			<input type="submit" value="Оформить заказ" class="form-basket__input">
+        		    		</div>
+        		    	</div>
+        		    </form>
+        		    </li>
         	    </ul>
         	</div>
         	<div class="main-header__bottom">
@@ -73,29 +113,29 @@
 		    	<fieldset class="fat"> <!--radio: name-у всех одинаковые, value-разные-->
 		    		<legend class="fat__title">Жирность:</legend>
 		    		<div class="sort__list sort__list--fat">
-		    		<input type="radio" class="fat__field" name="fat-radio" value="0%" id="min">
-		    		<label for="min" class="fat__description">0%</label>
-		    		<input type="radio" class="fat__field" name="fat-radio" value="до 10%" id="little" checked>
-		    		<label for="little" class="fat__description">до 10%</label>
-		    		<input type="radio" class="fat__field" name="fat-radio" value="до 30%" id="big">
-		    		<label for="big" class="fat__description">до 30%</label>
-		    		<input type="radio" class="fat__field" name="fat-radio" value="выше 30%" id="max">
-		    		<label for="max" class="fat__description">выше 30%</label>
+		    			<input type="radio" class="fat__field" name="fat-radio" value="0%" id="min">
+		    			<label for="min" class="fat__description">0%</label>
+		    			<input type="radio" class="fat__field" name="fat-radio" value="до 10%" id="little" checked>
+		    			<label for="little" class="fat__description">до 10%</label>
+		    			<input type="radio" class="fat__field" name="fat-radio" value="до 30%" id="big">
+		    			<label for="big" class="fat__description">до 30%</label>
+		    			<input type="radio" class="fat__field" name="fat-radio" value="выше 30%" id="max">
+		    			<label for="max" class="fat__description">выше 30%</label>
 		    		</div>
 		    	</fieldset>
 		    	<fieldset class="fillers">  <!--checkbox: name-у всех разные, value-не обязательны-->
 		    		<legend class="fillers__title">Наполнители:</legend>
 		    		<div class="sort__list sort__list--fillers">
-		    		<input type="checkbox" name="fillers-chocolate" id="fillers-chocolate" class="fillers__field" checked>
-		    		<label for="fillers-chocolate" class="fillers__description">Шоколадные</label>
-		    		<input type="checkbox" name="fillers-sugar" id="fillers-sugar" class="fillers__field" checked>
-		    		<label for="fillers-sugar" class="fillers__description">Сахарные присыпки</label>
-		    		<input type="checkbox" name="fillers-fruit" id="fillers-fruit" class="fillers__field">
-		    		<label for="fillers-fruit" class="fillers__description">Фрукты</label>
-		    		<input type="checkbox" name="fillers-syrups" id="fillers-syrups" class="fillers__field">
-		    		<label for="fillers-syrups" class="fillers__description">Сиропы</label>
-		    		<input type="checkbox" name="fillers-jam" id="fillers-jam" class="fillers__field">
-		    		<label for="fillers-jam" class="fillers__description">Джемы</label>
+		    			<input type="checkbox" name="fillers-chocolate" id="fillers-chocolate" class="fillers__field" checked>
+		    			<label for="fillers-chocolate" class="fillers__description">Шоколадные</label>
+		    			<input type="checkbox" name="fillers-sugar" id="fillers-sugar" class="fillers__field" checked>
+		    			<label for="fillers-sugar" class="fillers__description">Сахарные присыпки</label>
+		    			<input type="checkbox" name="fillers-fruit" id="fillers-fruit" class="fillers__field">
+		    			<label for="fillers-fruit" class="fillers__description">Фрукты</label>
+		    			<input type="checkbox" name="fillers-syrups" id="fillers-syrups" class="fillers__field">
+		    			<label for="fillers-syrups" class="fillers__description">Сиропы</label>
+		    			<input type="checkbox" name="fillers-jam" id="fillers-jam" class="fillers__field">
+		    			<label for="fillers-jam" class="fillers__description">Джемы</label>
 					</div>
 		    	</fieldset>
 		    	<input class="form-catalog__btn" type="submit" value="Применить">
