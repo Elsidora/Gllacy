@@ -21,7 +21,6 @@
 			border-bottom-left-radius: 15% 50%
 			border-top-right-radius: 15% 50%
 			border-bottom-right-radius: 15% 50%
-			color: #000
 
 		&--active
 			padding: 7px 13px
@@ -34,23 +33,35 @@
 		color: #fff
 		&:hover
 			color: #000
+		&:active
+			color: #000
 		
 	&__subList
 		position: absolute
-		top: 35px
+		top: 37px
 		left: -5px
-		border-radius: 10px
+		border-radius: 5px
 		z-index: 10
-		width: 124px
+		width: 140px
 		background: #fff
 		display: none
 	&__subItem
-		padding: 10px
+		padding: 11px 17px
+		padding-bottom: 5px
 		font: 14px/16px "Roboto", "Arial", sans-serif
 		&:hover
 			background: #fbded7
 		&:active
 			background: #f6b5a5
+		&--new
+			font: 14px/16px "Roboto Bold", "Arial", sans-serif
+			border-bottom: 1px solid rgba(0, 0, 0, .4)
+			padding-bottom: 11px
+			&:hover
+				background: #fff
+			&:active
+				background: #fff
+			
 	&__subLink
 		color: #000
 	&__service
@@ -100,36 +111,41 @@
 	&__form-search
 		position: absolute
 		top: 35px
-		left: -325px
-		width: 315px
+		left: -307px
+		width: 310px
 		text-align: center
-		padding: 20px
+		padding: 20px 15px
 		background: #f8f7f4
-		border-radius: 10px
+		border-radius: 5px
 		display: none
 		z-index: 15
 	&__input-search
-		width: 290px
-		padding: 0 10px
+		width: 285px
+		padding: 10px
+		border: none
+		border: 1px solid #b4b4b4
+		border-radius: 5px
 		font: 14px/24px "Roboto", "Arial", sans-serif
 		color: b4b4b4
 	&__form-login
 		position: absolute
 		top: 35px
-		left: -190px
-		border-radius: 10px
+		left: -180px
+		border-radius: 5px
 		display: none
-		width: 245px
+		width: 239px
 		padding: 20px
+		padding-left: 18px
 		text-align: center
 		background: #f8f7f4
 	&__input-info
-		width: 210px
+		width: 213px
 		padding: 10px 15px
-		margin-bottom: 10px
+		padding-left: 12px
+		margin-bottom: 18px
 		font: 14px/24px "Roboto", "Arial", sans-serif
 		color: #b4b4b4
-		border-radius: 10px
+		border-radius: 5px
 		border: none
 		border: 1px solid #b4b4b4
 	&__wrapper-link
@@ -145,6 +161,7 @@
 		border: none
 		font: 18px/24px "Roboto Bold", "Arial", sans-serif
 		color: #fff
+		cursor: pointer
 	&__wrapper-subLink
 		text-align: left
 		font: 13px/24px "Roboto", "Arial", sans-serif
@@ -153,6 +170,7 @@
 		display: block
 		color: #000
 		text-decoration: underline
+		cursor: pointer
 	&__bottom
 		text-align: right
 		color: #fff
@@ -164,43 +182,72 @@
 .form-basket
 	position: absolute
 	top: 35px
-	left: -430px
-	width: 510px
+	left: -420px
+	width: 520px
 	background: #f8f7f4
 	padding: 10px
 	border-radius: 10px
 	font: 13px/16px "Roboto", "Arial", sans-serif
 	display: none
+	&__items
+		margin-bottom: 15px
 		
 	&__item
 		display: flex
 		justify-content: space-between
 		align-items: center
-		padding: 0 15px
+		padding: 10px 30px
+		padding-right: 25px
+		position: relative
+		&::after,
+		&::before
+			position: absolute
+			content: ""
+			width: 10px
+			top: 25px
+			left: 5px
+			border: 1px solid #7e7d7c
+			cursor: pointer
+		&::after
+			transform: rotate(45deg)
+		&::before
+			transform: rotate(-45deg)
 	&__image-title
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__image
+		margin-right: 12px
+	&__weight-cost
 		display: flex
 		justify-content: space-between
 		align-items: center
 	&__weight
 		position: relative
-		margin-right: 15px
-		&::after
+		&::after,
 		&::before
 			position: absolute
 			content: ""
-			width: 10px
-			height: 1px
-			top: 5px
+			width: 6px
+			top: 7px
 			left: 35px
-			border: 1px solid #000
+			border: 1px solid #7e7d7c
 		&::after
 			transform: rotate(45deg)
 		&::before
 			transform: rotate(-45deg)
+	&__cost
+		color: #acacab
+		margin-left: 15px
 	&__result
 		text-align: right
+		padding: 14px 5px
+		border-top: 1px solid #7e7d7c
+	&__summary
+		font: 15px/18px "Roboto Bold", "Arial", sans-serif
+		color: #000
 	&__input
-		padding: 10px 24px
+		padding: 10px 16px
 		background: #ec573b
 		border-top-left-radius: 10% 50%
 		border-bottom-left-radius: 10% 50%
@@ -209,5 +256,7 @@
 		border: none
 		font: 18px/24px "Roboto Bold", "Arial", sans-serif
 		color: #fff
+		cursor: pointer
+		margin-top: 15px
 	
 	
