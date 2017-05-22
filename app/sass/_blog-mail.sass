@@ -15,8 +15,15 @@
 		font: 24px/30px "Roboto Bold", "Arial", sans-serif
 	&__link
 		color: #000
-		text-decoration: underline
+		text-decoration: underline solid rgba(0, 0, 0, .4)
+		&:hover
+			color: rgba(232, 77, 55, 1)
+			text-decoration: underline solid rgba(232, 77, 55, .4)
+		&:active
+			color: rgba(232, 77, 55, 1)
+			text-decoration: underline solid rgba(232, 77, 55, .4)
 .mail
+	position: relative
 	width: 528px
 	padding: 30px 20px
 	padding-right: 10px
@@ -31,10 +38,15 @@
 		width: 345px
 		padding: 10px
 		padding-bottom: 8px
+		border: none
+		border: 1px solid rgba(0, 0, 0, .2)
 		border-radius: 5px
 		font: 16px/24px "Roboto", "Arial", sans-serif
+		
 	&__btn
-		width: 140px
+		position: absolute
+		width: 126px
+		right: 20px
 		padding: 10px
 		background: #ec573b
 		border-top-left-radius: 15% 50%
@@ -44,4 +56,9 @@
 		border: none
 		font: 18px/24px "Roboto Bold", "Arial", sans-serif
 		color: #fff
+		cursor: pointer
+		&:hover
+			background: #ed715f
+		&:active
+			background: #de5a3b
 	
