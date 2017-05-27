@@ -1,17 +1,48 @@
 .paginator
-	&__list
-		display: flex
-		justify-content: flex-end
-	&__item
-		padding: 9px
-		font: 16px/18px "Roboto", "Arial", sans-serif
-		&--active
-			background: #fff
-			border-radius: 50%
-			padding: 9px 10px
-		
-
+	display: flex
+	justify-content: flex-end
+	position: relative
+	border-bottom: 1px solid rgba(255, 255, 255, .4)
+	padding-bottom: 28px
+	&::before,
+	&::after
+		position: absolute
+		content: ""
+		width: 8px
+		height: 8px
+		top: 10px
+		background: transparent
+		border: 2px solid #fff
+		border-top: none
+		border-right: none
+	&::before
+		transform: rotate(-135deg)
+	&::after
+		left: 960px
+		border: 2px solid #9db1a5
+		border-top: none
+		border-right: none
+		transform: rotate(45deg)
 	&__link
+		padding: 5px
+		font: 16px/18px "Roboto", "Arial", sans-serif
 		color: #fff
+		min-width: 17px
+		text-align: center
+		&:hover
+			background: #9db1a5
+			border-radius: 50%
 		&--active
 			color: #000
+			background: #fff
+			border-radius: 50%
+			&:hover
+				background: #fff
+		&:active
+			background: #fff
+			color: #000
+	&__prev,
+	&__next
+		font-size: 0
+		min-width: 17px
+		padding: 5px

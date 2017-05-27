@@ -92,7 +92,7 @@
 		    <form class="form-catalog" action="" method="">
 		        <fieldset class="sort">
                     <legend class="sort__title">Сортировка:</legend>
-                    <select class="sort__list">
+                    <select class="sort__list sort__list--sort">
                         <option class="sort__item sort__item--active">по популярности</option>
                         <option>сначала недорогие</option>
                         <option>сначала дорогие</option>
@@ -276,14 +276,13 @@
 		    	</div>
 		    </section>
 		    <aside class="paginator">
-		    	<ul class="paginator__list">
-		    		<li class="paginator__item paginator__item--active"><a href="" class="paginator__link paginator__link--active">1</a></li>
-		    		<li class="paginator__item"><a href="" class="paginator__link">2</a></li>
-		    		<li class="paginator__item"><a href="" class="paginator__link">3</a></li>
-		    		<li class="paginator__item"><a href="" class="paginator__link">4</a></li>
-		    		<li class="paginator__item"><a href="" class="paginator__link">5</a></li>
-		    		<li class="paginator__item"><a href="" class="paginator__link">6</a></li>
-		    	</ul>
+		    	<a class="paginator__prev" href="" disabled>prev</a>
+		    	<a href="" class="paginator__link paginator__link--active">1</a>
+		    	<a href="" class="paginator__link">2</a>
+		    	<a href="" class="paginator__link">3</a>
+		    	<a href="" class="paginator__link">4</a>
+		    	<a href="" class="paginator__link">5</a>
+		    	<a href="" class="paginator__next">next</a>
 		    </aside>		
 	    </main>
 		<footer class="main-footer main-footer--catalog">
