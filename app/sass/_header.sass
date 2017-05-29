@@ -1,4 +1,5 @@
 .main-header
+	padding-top: 10px
 	&__top
 		display: flex
 		position: relative
@@ -92,6 +93,7 @@
 				cursor: pointer
 				color: #000
 		&--search
+			position: relative
 			padding: 16px
 			border-radius: 50%
 			&:hover .main-header__form-search
@@ -99,6 +101,27 @@
 			&:hover
 				background: #f8f7f4
 				cursor: pointer
+			&::before,
+			&::after
+				position: absolute
+				content: ''
+			&::before
+				width: 8px
+				height: 8px
+				background: transparent
+				border: 2px solid rgba(255, 255, 255, 1) 
+				border-radius: 50%
+				top: 5px
+				left: 9px
+			&:hover::before
+				border: 2px solid rgba(0, 0, 0, 1)
+			&::after
+				width: 10px
+				height: 2px
+				background: rgba(255, 255, 255, 1)
+				transform: rotate(45deg)
+			&:hover::after
+				background: rgba(0, 0, 0, 1)
 		&--catalog
 			padding-right: 12px
 			padding-left: 45px

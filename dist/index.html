@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  	<input type="radio" id="btn1" name="toggle" checked>
+  	<input type="radio" id="btn2" name="toggle">
+  	<input type="radio" id="btn3" name="toggle">
+   <div class="wrapper">	
     <header class="main-header">
         <div class="container">
 
@@ -18,7 +22,7 @@
 					    <li class="main-header__item"><a class = "main-header__link" href="">Каталог</a>
        			            <ul class="main-header__subList">
        			            	<li class="main-header__subItem main-header__subItem--new"><a href="" class="main-header__subLink">Новинки</a></li>
-       			            	<li class="main-header__subItem"><a href="catalog.html" class="main-header__subLink">Сливочное</a></li>
+       			            	<li class="main-header__subItem"><a href="catalog.html" target="_blank" class="main-header__subLink">Сливочное</a></li>
        			            	<li class="main-header__subItem"><a href="" class="main-header__subLink">Щербеты</a></li>
        			            	<li class="main-header__subItem"><a href="" class="main-header__subLink">Фруктовый лед</a></li>
        			            	<li class="main-header__subItem"><a href="" class="main-header__subLink">Мелорин</a></li>
@@ -53,17 +57,22 @@
         <div class="container">
 
             <section class="carousel">
-        	    <div class="carousel__slider">
+        	    <div class="carousel__slider" id="slider1">
         		    <h1 class="carousel__title">Крем-брюле и пломбир с малиновым джемом</h1>
         		    <a href="" class="carousel__request btn-red">Давайте оба!</a>
         	    </div>
-        	    <div class="carousel__slider">
+        	    <div class="carousel__slider" id="slider2">
         		    <h1 class="carousel__title">Шоколадный пломбир и лимонный сорбет</h1>
         		    <a href="" class="carousel__request btn-red">Давайте оба!</a>
         	    </div>
-        	    <div class="carousel__slider">
+        	    <div class="carousel__slider" id="slider3">
         		    <h1 class="carousel__title">Пломбир с помадкой и клубничный щербет</h1>
         		    <a href="" class="carousel__request btn-red">Давайте оба!</a>
+        	    </div>
+        	    <div class="carousel__controls">
+        	    	<label class="carousel__label" for="btn1"></label>
+        	    	<label class="carousel__label" for="btn2"></label>
+        	    	<label class="carousel__label" for="btn3"></label>
         	    </div>
             </section>
             <section class="banners">
@@ -190,6 +199,8 @@
             </div>
         </div>
     </footer>
+	</div>
     <script src=""></script>
+	
 </body>
 </html>
