@@ -1,14 +1,30 @@
-let gulp = require('gulp');
-let sass = require('gulp-sass');
+'use strict';
 
-gulp.task('sass', function() {
-	return gulp.src('app/sass/**/*.sass')
-	.pipe(sass())
-	.pipe(gulp.dest('dist/css'))
-});
+global.$ = {
+	path: {
+		task: require('./gulp/paths/tasks.js')
+	},
+	gulp: require('gulp'),
+	del: require('del'),
+	browserSync: require('browser-sync').create(),
+	gcmq: require('gulp-group-css-media-queries'),
+	glp: require('gulp-load-plugins')()
+}
 
-gulp.task('watch', function() {
-	gulp.watch('app/sass/**/*.sass', gulp.series('sass'));
-});
+$.path.task.forEach(function(taskPath) {
+	require(taskPath)();
+})
 
-gulp.task('default', gulp.series('sass', 'watch'));
+$.gulp.task('default', $.gulp.series(
+	'clean',
+	$.gulp.parallel(
+		'sass',
+		'copy-html',
+		'imagemin'
+	),
+	'mincss',
+	$.gulp.parallel(
+		'watch',
+		'serve'
+	)
+));
