@@ -7,5 +7,6 @@ module.exports = [
 	'./gulp/tasks/clean.js',
 	'./gulp/tasks/mincss.js',
 	'./gulp/tasks/imagemin.js',
-	'./gulp/tasks/copy-html.js'
+	'./gulp/tasks/copy-html.js',
+	'./gulp/tasks/spritesmith.js'
 ];

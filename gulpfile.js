@@ -8,6 +8,8 @@ global.$ = {
 	del: require('del'),
 	browserSync: require('browser-sync').create(),
 	gcmq: require('gulp-group-css-media-queries'),
+	gsg: require('gulp-sass-glob'),
+	spritesmith: require('gulp.spritesmith'),
 	glp: require('gulp-load-plugins')()
 }
 

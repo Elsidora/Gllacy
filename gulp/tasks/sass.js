@@ -3,8 +3,9 @@
 module.exports = function() {
 	
 $.gulp.task('sass', function() {
-	return $.gulp.src('./source/sass/style.sass')
+	return $.gulp.src('./source/styles/style.sass')
 		.pipe($.glp.sourcemaps.init())
+		.pipe($.gsg())
 		.pipe($.glp.sass()).on('error', $.glp.notify.onError({title: 'Style'}))
 		.pipe($.glp.autoprefixer({ browsers: ['last 3 version', '> 1%',/*'ie8', 'ie9',*/ 'Opera 12.1']}))
 		.pipe($.gcmq())
