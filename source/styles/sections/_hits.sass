@@ -2,34 +2,34 @@
 	display: flex
 	justify-content: space-between
 	margin-bottom: 25px
-	&__container
-		position: relative
-		&:hover .item-block
-			display: block
+.hits-container
+	position: relative
+	&:hover .item-block
+		display: block
 .item
 	width: 267px
 	padding-bottom: 5px
-	&__show
-		position: relative
-	&__price
-		position: absolute
-		left: 5px
-		bottom: 20px
-		font: 38px/42px "Roboto Bold", "Arial", sans-serif
-		color: #fff
-	&__description
-		font: 16px/22px "Roboto", "Arial", sans-serif
-		color: #fff
-		padding: 10px
-		text-align: center
-		text-decoration: underline solid rgba(255, 255, 255, .4)
-		cursor: pointer
-		&:hover
-			color: rgba(255, 188, 158, 1)
-			text-decoration: underline solid rgba(255, 188, 158, .5)
-		&:active
-			color: rgba(255, 188, 158, 1)
-			text-decoration: underline solid rgba(255, 188, 158, .5)
+.show
+	position: relative
+.price
+	position: absolute
+	left: 5px
+	bottom: 20px
+	font: 38px/42px "Roboto Bold", "Arial", sans-serif
+	color: #fff
+.description
+	font: 16px/22px "Roboto", "Arial", sans-serif
+	color: #fff
+	padding: 10px
+	text-align: center
+	text-decoration: underline solid rgba(255, 255, 255, .4)
+	cursor: pointer
+	&:hover
+		color: rgba(255, 188, 158, 1)
+		text-decoration: underline solid rgba(255, 188, 158, .5)
+	&:active
+		color: rgba(255, 188, 158, 1)
+		text-decoration: underline solid rgba(255, 188, 158, .5)
 .item-block
 	display: none
 	position: absolute

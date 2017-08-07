@@ -1,13 +1,14 @@
 .banners
 	display: flex
 	justify-content: space-between
-	margin-bottom: 10px
+	min-height: 229px
+	margin-bottom: 40px
 .banner
 	position: relative
 	width: 520px
-	min-height: 229px
 	padding: 15px 20px
 	background: #849d8f url("../img/banners/raspberry_background.png") no-repeat
+	background-size: cover
 	&__title
 		font: 35px/41px "Roboto Bold", "Arial", sans-serif
 		color: #fff
@@ -15,12 +16,14 @@
 	&__description
 		font: 18px/22px "Roboto Bold", "Arial", sans-serif
 		color: #fff
+		margin-bottom: 30px
 	&--background
 		background: #849d8f url("../img/banners/chocolate_background.png") no-repeat
+		background-size: cover
 	&__desire
 		position: absolute
 		right: 20px
-		bottom: 55px
+		bottom: 25px
 		padding: 10px 24px
 		background: #ec573b
 		border-top-left-radius: 15% 50%

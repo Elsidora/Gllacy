@@ -1,0 +1,169 @@
+.popup-show
+	position: fixed
+	top: 120px
+	left: 50%
+	display: block
+	width: 478px
+	margin-left: -315px
+	padding: 25px
+	font: 16px/18px "Roboto Bold", "Arial", sans-serif
+	color: #000
+	background: #00ff00
+	z-index: 9
+	&__close
+		position: absolute
+		top: 10px
+		right: 10px
+		width: 35px
+		height: 35px
+		font-size: 0
+		background: #fb565a
+		border: none
+		border-radius: 50%
+		cursor: pointer
+		outline: 0
+		z-index: 10
+		&::before
+			position: absolute
+			top: 16px
+			left: 8px
+			content: ""
+			width: 19px
+			height: 3px
+			background: #fff
+			border-radius: 1px
+			transform: rotate(45deg)
+			z-index: 11
+		&::after
+			position: absolute
+			top: 16px
+			left: 8px
+			content: ""
+			width: 19px
+			height: 3px
+			background: #fff
+			border-radius: 1px
+			transform: rotate(-45deg)
+			z-index: 11
+	&__open
+		display: block
+		animation: bounce 0.7s
+	&__error
+		animation: dance 0.7
+
+	
+.popup-map
+	position: fixed
+	top: 120px
+	width: 100%
+	height: 416px
+	background: #b5b5b5
+	z-index: 5
+	&__close
+		position: absolute
+		top: 40px
+		right: 5px
+		width: 35px
+		height: 35px
+		font-size: 0
+		background: #fb565a
+		border: none
+		border-radius: 50%
+		cursor: pointer
+		outline: 0
+		z-index: 10
+		&::before
+			position: absolute
+			top: 16px
+			left: 8px
+			content: ""
+			width: 19px
+			height: 3px
+			background: #fff
+			border-radius: 1px
+			transform: rotate(45deg)
+		&::after
+			position: absolute
+			top: 16px
+			left: 8px
+			content: ""
+			width: 19px
+			height: 3px
+			background: #fff
+			border-radius: 1px
+			transform: rotate(-45deg)
+	&__open
+		display: block
+		animation: bounce 0.9s
+
+.popup-overlay 
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 3
+	background: rgba(0, 0, 0, .4)
+	&__open
+		display: block
+
+.popup-show,
+.popup-map,
+.popup-overlay
+   display: none
+
+
+@keyframes bounce 
+    0% {transform: translateY(-1000px);}
+    50% {transform: translateY(60px);}
+    80% {transform: translateY(-10px);}
+    100% {transform: translateY(0); }
+
+	
+@keyframes dance  
+    0%, 100%               {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80%      {transform: translateX(10px);}
+
+.popup-form
+	width: 428px
+	margin-bottom: 20px
+	&__title
+		font: 24px/28px "Roboto Bold", "Arial", sans-serif
+		margin-bottom: 20px
+	&__myname
+		width: 267px
+		padding: 15px
+		font: 16px/24px "Roboto", "Arial", sans-serif
+		border-radius: 5px
+		margin-bottom: 20px
+		&:hover
+    		border-radius: 1px solid #a2a9ac
+		&:focus
+    		border-radius: 1px solid #56bffb
+    		cursor: pointer
+	&__area
+		display: block
+		width: 440px
+		font: 16px/24px "Roboto", "Arial", sans-serif
+		padding: 10px
+		border-radius: 5px
+		margin-bottom: 50px
+	&__submit
+		display: block
+		width: 139px
+		padding: 15px 25px
+		background: #ec573b
+		border-top-left-radius: 15% 50%
+		border-bottom-left-radius: 15% 50%
+		border-top-right-radius: 15% 50%
+		border-bottom-right-radius: 15% 50%
+		border: none
+		font: 18px/24px "Roboto Bold", "Arial", sans-serif
+		color: #fff
+		margin-left: auto
+		&:hover
+			background: #ed715f
+		&:active
+			background: #de5a3b
+

@@ -22,6 +22,8 @@ $.gulp.task('default', $.gulp.series(
 	$.gulp.parallel(
 		'sass',
 		'copy-html',
+		'copy-js',
+		'fonts',
 		'imagemin'
 	),
 	'mincss',
