@@ -1,3 +1,5 @@
+@import "mixins/mixins"
+@import "sprites/sprites"
 .main-header
 	padding-top: 10px
 	&__top
@@ -30,6 +32,9 @@
 			top: 90%
 			width: 100%
 			height: 20px
+		&:hover > a
+			background-color: #f7f6f3
+			color: #323232
 		&--login
 			padding-right: 16px
 			&:hover .main-header__form-login
@@ -76,7 +81,44 @@
 				display: block
 			&:hover
 				background: #f8f7f4
-				cursor: pointer	
+				cursor: pointer
+	&__link
+		color: #fff
+		&:hover
+			color: #000
+		&:active
+			color: #000
+		&--basket
+			position: relative
+			&::before
+				position: absolute
+				content: ''
+				@include sprite($icon-basket)
+				top: -2px
+				left: -25px
+		&--active
+			position: relative
+			&::before
+				position: absolute
+				content: ''
+				@include sprite($icon-basket_hover)
+				top: -2px
+				left: -25px
+		&--login
+			position: relative
+			&::before
+				position: absolute
+				content: ''
+				@include sprite($icon-enter)
+				top: -2px
+				left: -25px
+			&:hover::before
+				position: absolute
+				content: ''
+				@include sprite($icon-enter_hover)
+				top: -2px
+				left: -25px
+				
 	&__form-search
 		position: absolute
 		z-index: 1000

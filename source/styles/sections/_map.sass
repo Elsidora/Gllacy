@@ -7,6 +7,12 @@
 	margin: 0 auto
 	cursor: pointer
 	margin-bottom: 37px
+	&::before
+		position: absolute
+		content: ''
+		top: 135px
+		left: 250px
+		@include sprite($icon-pin)
 .contacts
 	position: absolute
 	width: 255px

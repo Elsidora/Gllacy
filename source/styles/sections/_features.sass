@@ -1,3 +1,5 @@
+@import "mixins/mixins"
+@import "sprites/sprites"
 .features-container
 	background: #849d8f url("../img/other/background.jpg")
 	padding: 25px 22px
@@ -14,7 +16,29 @@
 		width: 575px
 		padding-left: 55px
 	&__feature
+		position: relative
 		font: 16px/22px "Roboto", "Arial", sans-serif
 		margin-bottom: 22px
+		&--ice-cream,
+		&--sheet,
+		&--cow,
+		&--thermo
+			&:before
+				position: absolute
+				content: ""
+				top: -15px
+				left: -60px
+		&--ice-cream
+			&:before
+				@include sprite($icon-ice-cream)
+		&--sheet
+			&:before
+				@include sprite($icon-sheet)
+		&--cow
+			&:before
+				@include sprite($icon-cow)
+		&--thermo
+			&:before
+				@include sprite($icon-thermo)
 		&--right
 			padding-left: 18px
